@@ -1,0 +1,15 @@
+{
+  "auto-who": {
+    "settings": {
+      "enabled": {
+        "name": "Enabled"
+      },
+      "keyword": {
+        "name": "Keyword"
+      },
+      "exclude": {
+        "name": "Exclude"
+      }
+    }
+  }
+}
