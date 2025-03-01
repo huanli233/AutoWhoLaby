@@ -15,8 +15,9 @@ public class AutoWhoAddon extends LabyAddon<AutoWhoConfiguration> {
   }
 
   public void checkAndSend(String message) {
-    if (message.contains(configuration().keyword.getOrDefault(AutoWhoConfiguration.DEFAULT_KEYWORD)) &&
-        !message.contains(configuration().exclude.getOrDefault(":"))) {
+    if (configuration().enabled().getOrDefault() &&
+            message.contains(configuration().keyword.getOrDefault(AutoWhoConfiguration.DEFAULT_KEYWORD)) &&
+            !message.contains(configuration().exclude.getOrDefault(":"))) {
       Laby.references().chatExecutor().chat("/who", false);
     }
   }
